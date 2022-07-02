@@ -1,4 +1,4 @@
-package testing.java.auto;
+package testing.java.auto.addressbook;
 
 public class Point {
  double x;

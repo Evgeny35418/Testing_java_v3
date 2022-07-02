@@ -1,4 +1,4 @@
-package testing.java.auto;
+package testing.java.auto.addressbook;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

@@ -1,8 +1,4 @@
-package testing.java.auto;
-
-import com.sun.javafx.geom.RectangularShape;
-
-import java.sql.SQLOutput;
+package testing.java.auto.addressbook;
 
 public class MyStart {
   public static void main(String[] args) {
