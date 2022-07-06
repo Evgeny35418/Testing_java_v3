@@ -1,4 +1,4 @@
-package testing.java.auto.addressbook;
+package model;
 
 public class NewUser {
   private final String firstName;
