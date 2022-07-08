@@ -9,9 +9,9 @@ public class NewUserCreationTests extends TestBase {
   @Test
   public void testNewUserCreation() throws Exception {
 
-    appM.gotoAddNewPage();
-    appM.fillAddNewForm(new NewUser("Ivan", "ivanov", "autotest", "saint-peterburg", "999999999", "jekaqa@mail.ru"));
-    appM.creatingANewUser();
+    appM.getNavigationContactHelper().gotoAddNewPage();
+    appM.getContactHelper().fillAddNewForm(new NewUser("Albert", "ivanov", "autotest", "saint-peterburg", "999999999", "jekaqa@mail.ru"));
+    appM.getContactHelper().creatingANewUser();
 
   }
 
