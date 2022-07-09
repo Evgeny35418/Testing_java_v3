@@ -4,7 +4,7 @@ package tests;
 import org.testng.annotations.*;
 import model.NewUser;
 
-public class NewUserCreationTests extends TestBase {
+public class ContactCreationTests extends TestBase {
 
   @Test
   public void testNewUserCreation() throws Exception {

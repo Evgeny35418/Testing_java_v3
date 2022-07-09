@@ -13,4 +13,12 @@ public class NavigationContactHelper extends GroupHelper {
 
  click(By.linkText("add new"));
   }
+
+  public void initContactModification() {
+    click(By.xpath("//img[@alt='Edit']"));
+  }
+
+  public void returnHome() {
+    click(By.linkText("home"));
+  }
 }

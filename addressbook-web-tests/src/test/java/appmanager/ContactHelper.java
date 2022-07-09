@@ -23,4 +23,9 @@ public class ContactHelper extends HelperBase {
     type(By.name("email"),newUser.getEmail());
 
   }
+
+
+  public void deleteContact() {
+    click(By.xpath("//div[@id='content']/form[2]/input[2]"));
+  }
 }

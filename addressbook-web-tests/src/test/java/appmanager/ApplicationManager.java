@@ -19,7 +19,7 @@ public class ApplicationManager {
   wd = new ChromeDriver();
  wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     js = (JavascriptExecutor) wd;
- wd.get("http://localhost/addressbook/group.php");
+ wd.get("http://localhost/addressbook");
     contactHelper = new ContactHelper(wd);
     navigationContactHelper = new NavigationContactHelper(wd);
     groupHelper = new GroupHelper(wd);
