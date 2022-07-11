@@ -2,6 +2,8 @@ package appmanager;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 import java.time.Duration;
 
@@ -14,9 +16,18 @@ public class ApplicationManager {
   private NavigationHelper navigationHelper ;
   private GroupHelper groupHelper;
   private JavascriptExecutor js;
+  private String browser;
+
+  public ApplicationManager(String browser) {
+    this.browser = browser;
+  }
 
   public void init() {
-  wd = new ChromeDriver();
+    if( browser == BrowserType.CHROME){
+      wd = new ChromeDriver();
+    } else if (browser == BrowserType.FIREFOX) {
+      wd = new FirefoxDriver();
+    }
  wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     js = (JavascriptExecutor) wd;
  wd.get("http://localhost/addressbook");
