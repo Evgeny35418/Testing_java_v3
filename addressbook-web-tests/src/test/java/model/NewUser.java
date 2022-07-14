@@ -7,14 +7,16 @@ public class NewUser {
   private final String address;
   private final String telephone;
   private final String email;
+  private final String group;
 
-  public NewUser(String firstName, String lastName, String company, String address, String telephone, String email) {
+  public NewUser(String firstName, String lastName, String company, String address, String telephone, String email, String group) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.company = company;
     this.address = address;
     this.telephone = telephone;
     this.email = email;
+    this.group = group;
   }
 
   public String getFirstName() {
@@ -39,5 +41,9 @@ public class NewUser {
 
   public String getEmail() {
     return email;
+  }
+
+  public String getGroup() {
+    return group;
   }
 }
