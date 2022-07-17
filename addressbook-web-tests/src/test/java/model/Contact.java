@@ -1,6 +1,6 @@
 package model;
 
-public class NewUser {
+public class Contact {
   private final String firstName;
   private final String lastName;
   private final String company;
@@ -9,7 +9,7 @@ public class NewUser {
   private final String email;
   private final String group;
 
-  public NewUser(String firstName, String lastName, String company, String address, String telephone, String email, String group) {
+  public Contact(String firstName, String lastName, String company, String address, String telephone, String email, String group) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.company = company;

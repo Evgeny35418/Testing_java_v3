@@ -1,6 +1,6 @@
 package appmanager;
 
-import model.NewUser;
+import model.Contact;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -12,11 +12,11 @@ public class ContactHelper extends HelperBase {
     super(wd);
   }
 
-  public void creatingANewUser() {
+  public void clickCreatingContact() {
   click(By.xpath("//div[@id='content']/form/input[21]"));
   }
 
-  public void fillAddNewForm(NewUser newUser, boolean creation) {
+  public void fillAddNewForm(Contact newUser, boolean creation) {
     type(By.name("firstname"),newUser.getFirstName());
     type(By.name("lastname"),newUser.getLastName());
     type(By.name("company"),newUser.getCompany());
@@ -32,5 +32,24 @@ public class ContactHelper extends HelperBase {
   }
   public void deleteContact() {
     click(By.xpath("//div[@id='content']/form[2]/input[2]"));
+  }
+
+  public void createContact(Contact contact, boolean b) {
+   gotoAddNewPage();
+   fillAddNewForm(contact, b);
+   clickCreatingContact();
+    gotoHomePage();
+  }
+  public void gotoHomePage() {
+    click(By.linkText("home page"));
+  }
+
+  private void gotoAddNewPage() {
+    click(By.linkText("add new"));
+  }
+
+
+  public boolean isThereAContact() {
+  return isElementPresent(By.xpath("//img[@alt='Edit']"));
   }
 }
