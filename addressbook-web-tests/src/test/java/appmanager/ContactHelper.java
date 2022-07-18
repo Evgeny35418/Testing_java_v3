@@ -38,7 +38,7 @@ public class ContactHelper extends HelperBase {
    gotoAddNewPage();
    fillAddNewForm(contact, b);
    clickCreatingContact();
-    gotoHomePage();
+   gotoHomePage();
   }
   public void gotoHomePage() {
     click(By.linkText("home page"));
