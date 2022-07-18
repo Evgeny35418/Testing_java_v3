@@ -7,7 +7,7 @@ public class ContactDeleteTest extends TestBase{
   @Test
   public void testContactDelete(){
     if(! appM.getContactHelper().isThereAContact()){
-    appM.getContactHelper().createContact(new Contact("Jeka", "Smorzhevskij", "autotest", "saint-peterburg", "999999999", "jekaqa@mail.ru", "test1"), true);
+    appM.getContactHelper().createContact(new Contact("Jeka", "Smorzhevskij", "autotest", "saint-peterburg", "999999999", "jekaqa@mail.ru", "test1"));
     }
     appM.getNavigationContactHelper().initContactModification();
     appM.getContactHelper().deleteContact();
