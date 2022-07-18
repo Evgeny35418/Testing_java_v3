@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
-public class DemoTestsBase {
+public class DemoTestsBase extends MethodsDemoClass {
   private WebDriver wd;
   private String baseUrl;
   private JavascriptExecutor js;
@@ -39,7 +39,7 @@ public class DemoTestsBase {
 
   protected void dataFrom(String DataFrom) {
     wd.findElement(By.id("datepicker-from")).click();
-    wd.findElement(By.linkText("24")).click();
+    wd.findElement(By.linkText(DataFrom)).click();
   }
 
   protected void ArriveTo(String CityTo) {
@@ -63,22 +63,5 @@ public class DemoTestsBase {
     wd.quit();
 
   }
-
-  private boolean isElementPresent(By by) {
-    try {
-      wd.findElement(by);
-      return true;
-    } catch (NoSuchElementException e) {
-      return false;
-    }
   }
 
-  private boolean isAlertPresent() {
-    try {
-      wd.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
-      return false;
-    }
-  }
-}
