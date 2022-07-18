@@ -10,11 +10,11 @@ public class ContactCreationTests extends TestBase {
   @Test
   public void testNewUserCreation() throws Exception {
     appM.getGroupHelper().returnToGroupPage();
-    if (!appM.getGroupHelper().notGroup()) {
-      appM.getGroupHelper().createGroup(new GroupData("test111", null, null));
+    if (!appM.getGroupHelper().isThereAGroup()) {
+      appM.getGroupHelper().createGroup(new GroupData("test2", null, null));
     }
 
-    appM.getContactHelper().createContact(new Contact("Jeka", "Smorzhevskij", "autotest", "saint-peterburg", "999999999", "jekaqa@mail.ru", "test111"));
+    appM.getContactHelper().createContact(new Contact("Jeka", "Smorzhevskij", "autotest", "saint-peterburg", "999999999", "jekaqa@mail.ru", "test2"));
 
 }
   }

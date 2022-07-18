@@ -43,7 +43,7 @@ public class GroupHelper extends HelperBase {
   }
 
   public void selectGroup() {
-    click(By.xpath("//span[2]/input"));
+    click(By.name("selected[]"));
   }
 
   public void initGroupModification() {
@@ -63,10 +63,7 @@ public class GroupHelper extends HelperBase {
   }
 
   public boolean isThereAGroup() {
-    return isElementPresent(By.xpath("//span[2]/input"));
+    return isElementPresent(By.name("selected[]"));
   }
 
-  public boolean notGroup() {
-    return isElementPresent(By.xpath("//span[2]/input"));
-  }
 }
