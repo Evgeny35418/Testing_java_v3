@@ -7,15 +7,15 @@ public class DemoTests extends DemoTestsBase {
 
   @Test
   public void testDemoTests() throws Exception {
-    goToPageRzd();
-    departureFrom("Санкт-Петербург");
-    ArriveTo("Казань");
-    dataFrom("3");
-    dataTo("26");
-    clickSearch();
-    resultSearch();
-    clickTicket();
-    goToPageRzd();
+    methodsDemoClass.goToPageRzd();
+    methodsDemoClass.departureFrom("Санкт-Петербург");
+    methodsDemoClass.ArriveTo("Казань");
+    methodsDemoClass.dataFrom("3");
+    methodsDemoClass.dataTo("26");
+    methodsDemoClass.clickSearch();
+    methodsDemoClass.resultSearch();
+    methodsDemoClass.clickTicket();
+    methodsDemoClass.goToPageRzd();
 
   }
 
