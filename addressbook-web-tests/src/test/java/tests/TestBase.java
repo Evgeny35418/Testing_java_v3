@@ -11,7 +11,6 @@ public class TestBase {
 
   @BeforeMethod(alwaysRun = true)
   public void setUp() throws Exception {
-
     appM.init();
   }
 

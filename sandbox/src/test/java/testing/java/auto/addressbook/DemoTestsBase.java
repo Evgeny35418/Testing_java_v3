@@ -18,8 +18,5 @@ public class DemoTestsBase {
 
   }
 
-  public MethodsDemoClass getMethodsDemoClass() {
-    return methodsDemoClass;
-  }
 }
 

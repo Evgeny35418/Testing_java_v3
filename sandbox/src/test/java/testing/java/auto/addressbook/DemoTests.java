@@ -4,6 +4,11 @@ import org.testng.annotations.*;
 
 
 public class DemoTests extends DemoTestsBase {
+  @Test
+  public void testDemo(){
+    methodsDemoClass.goToPageRzd();
+    methodsDemoClass.clickSearch();
+  }
 
   @Test
   public void testDemoTests() throws Exception {
