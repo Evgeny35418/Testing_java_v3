@@ -12,7 +12,6 @@ public class ContactCreationTests extends TestBase {
 
   @Test
   public void testNewUserCreation() throws Exception {
-
     List<Contact> before = appM.getContactHelper().getContactList();
     appM.getGroupHelper().returnToGroupPage();
     if (!appM.getGroupHelper().isThereAGroup()) {
