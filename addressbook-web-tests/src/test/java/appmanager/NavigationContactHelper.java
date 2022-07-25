@@ -14,7 +14,12 @@ public class NavigationContactHelper extends GroupHelper {
  click(By.linkText("add new"));
   }
 
-  public void initContactModification() {
+  public void selectContact( int index) {
+    wd.findElements(By.name("selected[]")).get(index).click();
+
+  }
+
+  public void selectModificationContact() {
     click(By.xpath("//img[@alt='Edit']"));
   }
 

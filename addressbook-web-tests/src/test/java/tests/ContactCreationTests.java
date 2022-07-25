@@ -6,11 +6,14 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import model.Contact;
 
+import java.util.List;
+
 public class ContactCreationTests extends TestBase {
 
   @Test
   public void testNewUserCreation() throws Exception {
     int before = appM.getContactHelper().getContactCount();
+    List<Contact> before = appM.getContactHelper().getGroupList();
     appM.getGroupHelper().returnToGroupPage();
     if (!appM.getGroupHelper().isThereAGroup()) {
       appM.getGroupHelper().createGroup(new GroupData("test2", null, null));
