@@ -1,6 +1,6 @@
 package appmanager;
 
-import model.Contact;
+import model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,7 +20,7 @@ public class ContactHelper extends HelperBase {
   click(By.xpath("//div[@id='content']/form/input[21]"));
   }
 
-  public void fillAddNewForm(Contact newUser, boolean creation) {
+  public void fillAddNewForm(ContactData newUser, boolean creation) {
     type(By.name("firstname"),newUser.getFirstName());
     type(By.name("lastname"),newUser.getLastName());
     type(By.name("company"),newUser.getCompany());
@@ -38,7 +38,7 @@ public class ContactHelper extends HelperBase {
     click(By.xpath("//div[@id='content']/form[2]/input[2]"));
   }
 
-  public void createContact(Contact contact) {
+  public void createContact(ContactData contact) {
    gotoAddNewPage();
    fillAddNewForm( contact, true);
    clickCreatingContact();
@@ -61,13 +61,14 @@ public class ContactHelper extends HelperBase {
    return wd.findElements(By.name("selected[]")).size();
   }
 
-  public List<Contact> getContactList() {
-    List<Contact> contacts = new ArrayList<Contact>();
+  public List<ContactData> getContactList() {
+    List<ContactData> contacts = new ArrayList<ContactData>();
     List<WebElement> elements = wd.findElements(By.xpath("//td/input"));
     for( WebElement element: elements){
-      String firstname = element.findElement(By.xpath("//td[2]")).getText();
-      String lastName = element.findElement(By.xpath("//td[3]")).getText();
-      Contact contact = new Contact(firstname,lastName,null,null,null,null,null);
+      String firstname = element.findElement(By.xpath("//td[3]")).getText();
+      String lastName = element.findElement(By.xpath("//td[2]")).getText();
+      String id = element.findElement(By.xpath("//td/input")).getAttribute("value");
+      ContactData contact = new ContactData(id,firstname,lastName,null,null,null,null,null);
       contacts.add(contact);
     }
     return contacts;
