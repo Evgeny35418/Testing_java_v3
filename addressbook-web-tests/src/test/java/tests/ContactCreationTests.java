@@ -17,7 +17,7 @@ public class ContactCreationTests extends TestBase {
     if (!appM.getGroupHelper().isThereAGroup()) {
       appM.getGroupHelper().createGroup(new GroupData("test2", null, null));
     }
-    appM.getContactHelper().createContact(new Contact("Jeka", "Smorzhevskij", "autotest", "saint-peterburg", "999999999", "jekaqa@mail.ru", "test32"));
+    appM.getContactHelper().createContact(new Contact("Jeka", "Smorzhevskij", "autotest", "saint-peterburg", "999999999", "jekaqa@mail.ru", "none"));
     List<Contact> after = appM.getContactHelper().getContactList();
     Assert.assertEquals(after.size(),before.size() +1);
 }
