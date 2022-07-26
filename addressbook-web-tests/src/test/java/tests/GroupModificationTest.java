@@ -27,7 +27,6 @@ public class GroupModificationTest extends  TestBase {
 
     before.remove(before.size()-1);
     before.add(group);
-    group.setId( after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
     Comparator<? super GroupData> byId = (g1,g2) -> Integer.compare(g1.getId(), g2.getId());
     before.sort(byId);
     after.sort(byId);
