@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class ContactDeleteTest extends TestBase{
+
   @Test(enabled = false)
   public void testContactDelete(){
     if(! appM.getContactHelper().isThereAContact()){

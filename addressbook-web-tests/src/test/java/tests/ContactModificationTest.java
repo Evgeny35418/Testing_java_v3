@@ -9,6 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public class ContactModificationTest extends TestBase {
+
   @Test(enabled = false)
   public void testContactModification(){
     if(! appM.getContactHelper().isThereAContact()){
