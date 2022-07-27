@@ -5,7 +5,6 @@ import org.testng.annotations.*;
 import model.GroupData;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 
@@ -13,11 +12,11 @@ public class GroupCreationTests extends TestBase {
 
   @Test
   public void testGroupCreation()  {
-    appM.getNavigationHelper().goToGroupPage();
-    List<GroupData> before = appM.getGroupHelper().getGroupList();
-    GroupData group = new GroupData("test1", null, null);
-    appM.getGroupHelper().createGroup(group);
-    List<GroupData> after = appM.getGroupHelper().getGroupList();
+    appM.goTo().groupPage();
+    List<GroupData> before = appM.group().list();
+    GroupData group = new GroupData().withName("test1");
+    appM.group().create(group);
+    List<GroupData> after = appM.group().list();
     Assert.assertEquals(after.size(),before.size() +1 );
 
 

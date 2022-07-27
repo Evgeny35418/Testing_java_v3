@@ -7,7 +7,6 @@ import org.testng.annotations.*;
 import model.ContactData;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class ContactCreationTests extends TestBase {
@@ -15,9 +14,9 @@ public class ContactCreationTests extends TestBase {
   @Test(enabled = false)
   public void testNewUserCreation() throws Exception {
     List<ContactData> before = appM.getContactHelper().getContactList();
-    appM.getGroupHelper().returnToGroupPage();
-    if (!appM.getGroupHelper().isThereAGroup()) {
-      appM.getGroupHelper().createGroup(new GroupData("test3", null, null));
+    appM.group().returnToGroupPage();
+    if (!appM.group().isThereAGroup()) {
+      appM.group().create(new GroupData().withName("test3"));
     }
     ContactData contact = new ContactData("Jeka", "Smorzhevskij", "autotest", "saint-peterburg", "999999999", "jekaqa@mail.ru", "none");
     appM.getContactHelper().createContact(contact);
