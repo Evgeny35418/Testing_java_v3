@@ -15,7 +15,6 @@ public class GroupDeletionTests extends TestBase {
       appM.group().create(new GroupData().withName("test555"));
     }
   }
-
   @Test
   public void testGroupDeletion() throws Exception {
     List<GroupData> before = appM.group().list();
