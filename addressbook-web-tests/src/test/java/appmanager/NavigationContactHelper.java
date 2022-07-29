@@ -20,7 +20,7 @@ public class NavigationContactHelper extends GroupHelper {
   }
 
   public void selectModificationContact(int index) {
-    click(By.xpath("//img[@alt='Edit']"));
+    wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
   }
 
   public void returnHome() {
